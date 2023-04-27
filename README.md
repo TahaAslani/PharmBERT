@@ -2,7 +2,12 @@
 A domain specific BERT model for drug labels
 
 
-To train the uncased model:
+To Pretrain the uncased model:
 ```
-train
+train.sh uncased
+```
+
+To Pretrain the cased model:
+```
+train.sh cased
 ```
