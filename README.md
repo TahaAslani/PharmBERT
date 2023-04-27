@@ -21,7 +21,7 @@ pretrain.sh cased
 ## Perform the Finetuning for ARD
 To finetine for the ARD task:
 
-###Cased:
+Cased:
 Prepare the data
 ```
 prepare_ard_data.py -d ard_data -m bert-base-cased -o json_tokens_cased
