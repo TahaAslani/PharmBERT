@@ -22,7 +22,7 @@ F1_list = []
 
 for seed in seeds:
 
-    f1_path = os.path.join(res_path, str(seed), 'eval-'+average+'-.json')
+    f1_path = os.path.join(res_path, str(seed), 'eval-micro-.json')
     f1 = read_json(f1_path)
     F1_list.append(f1)
 
