@@ -7,5 +7,5 @@ pip install git+https://github.com/huggingface/accelerate
 
 # Download Transformers codes
 wget https://github.com/huggingface/transformers/archive/refs/heads/v4.14.1-release.zip
-unzip main.zip
-rm main.zip
+unzip v4.14.1-release.zip
+rm v4.14.1-release.zip
