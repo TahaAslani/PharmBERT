@@ -21,8 +21,6 @@ pretrain.sh cased
 ## Perform the Finetuning for ARD
 To finetine for the ARD task:
 
-Prepare the data:
-
 Download all files of the train data
 https://osf.io/6h9q4/
 and save it in OSF/train
