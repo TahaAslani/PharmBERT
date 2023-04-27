@@ -10,12 +10,12 @@ bash 1-install-dependancies.sh
 ## Perform the domain-specific pre-training
 To pretrain the uncased model:
 ```
-pretrain.sh uncased
+bash pretrain.sh uncased
 ```
 
 To pretrain the cased model:
 ```
-pretrain.sh cased
+bash pretrain.sh cased
 ```
 
 ## Perform the Finetuning for ARD
@@ -32,9 +32,9 @@ and save it in OSF/test
 
 Convert data to json format:
 ```
-prepare_ard_data.py -d OSF -m bert-base-cased -o json_tokens_cased
+python prepare_ard_data.py -d OSF -m bert-base-cased -o json_tokens_cased
 ```
 Run the pipeline
 ```
-ARD.sh cased json_tokens_cased
+bash ARD.sh cased json_tokens_cased
 ```
