@@ -1,5 +1,6 @@
 pip install orderedset
 pip install pytorch
+pip install seqeval
 pip install transformers==4.14.1
 pip install evaluate
 pip install protobuf==3.20.*
