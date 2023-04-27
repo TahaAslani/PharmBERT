@@ -18,7 +18,7 @@ To pretrain the cased model:
 pretrain.sh cased
 ```
 
-
+## Perform the Finetuning for ARD
 To finetine for the ARD task:
 Cased:
 ```
