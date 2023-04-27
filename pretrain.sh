@@ -7,6 +7,16 @@ dailymed_spl_unique_path='dailymed_spl_unique.csv'
 train_data_path='Unique.txt'
 root_output_folder='output'
 
+
+# Set training parameters:
+max_seq_length=128
+max_steps=200000
+save_steps=20000
+learning_rate=2e-5
+batch_size=128
+
+seed=42
+
 # Select the model to train
 if [[ $1 == "cased" ]]; then
      initial_model='bert-base-cased'
@@ -16,13 +26,6 @@ else
      echo "Either select cased or uncased model!"
      exit $exit_code
 fi
-
-# Set training parameters:
-max_seq_length=128
-max_steps=200000
-save_steps=20000
-learning_rate=2e-5
-batch_size=128
 
 # Download and unzip DailyMed Data:
 wget https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip
@@ -63,4 +66,4 @@ python transformers-main/examples/pytorch/language-modeling/run_mlm.py \
   --save_total_limit $save_total_limit \
   --save_steps $save_steps \
   --per_gpu_train_batch_size $batch_size \
-  --seed 42 \
+  --seed $seed \
