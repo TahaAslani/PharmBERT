@@ -1,6 +1,6 @@
 model_path=$1
 data_path=$2
-output_dir='ARD-'$1
+output_dir=$3
 
 train_file=$data_path/train.json
 validation_file=$data_path/test.json
