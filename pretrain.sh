@@ -1,5 +1,3 @@
-
-
 # File paths:
 dailymed_url='https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/'
 dailymed_spl_path='dailymed_spl.csv'
@@ -27,21 +25,21 @@ else
      exit $exit_code
 fi
 
-# Download and unzip DailyMed Data:
+echo "Download and unzip DailyMed Data"
 wget https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip
 unzip dm_spl_zip_files_meta_data.zip
 
-# Download DailyMed data:
+echo "Process DailyMed data"
 python 2-dailymed_data.py -s $dailymed_spl_path -u $dailymed_url
 
-# Remove duplicates:
+echo "Remove duplicates"
 python 3-remove_duplicate.py -i $dailymed_spl_path -o $dailymed_spl_unique_path
 
-# Conver data to text
+echo "Conver data to text"
 python 4-convert-df-to-text.py -i $dailymed_spl_unique_path -o $train_data_path
 
 
-# Create output directory
+echo "Create output directory"
 output_path=$root_output_folder'/Model-128'
 catch_path=$root_output_folder'/Catch-128'
 
@@ -52,6 +50,7 @@ mkdir $catch_path
 # Save limit
 save_total_limit=$(($max_steps / $save_steps))
 
+echo "Train the model"
 python transformers-4.14.1-release/examples/pytorch/language-modeling/run_mlm.py \
   --train_file $train_data_path \
   --output_dir $output_path \
