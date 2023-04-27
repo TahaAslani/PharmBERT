@@ -17,3 +17,15 @@ To pretrain the cased model:
 ```
 pretrain.sh cased
 ```
+
+
+To finetine for the ARD task:
+Cased:
+```
+ARD.sh cased 'json_tokens_cased'
+```
+
+Uncased:
+```
+ARD.sh uncased 'json_tokens_uncased'
+```
