@@ -1,4 +1,4 @@
-conda install python=3.8.10 # Or use another way to install this version of python
+conda install python=3.8.10 -y # Or use another way to install this version of python
 
 pip install orderedset
 pip install pytorch
