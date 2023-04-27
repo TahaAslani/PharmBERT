@@ -22,13 +22,16 @@ pretrain.sh cased
 To finetine for the ARD task:
 
 Prepare the data:
-Download the train data
+
+Download all files of the train data
 https://osf.io/6h9q4/
 and save it in OSF/train
 
-Download the test data
+Download all files of the test data
 https://osf.io/n84w3/
 and save it in OSF/test
+
+
 
 ```
 prepare_ard_data.py -d OSF -m bert-base-cased -o json_tokens_cased
