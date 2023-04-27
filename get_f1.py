@@ -1,6 +1,7 @@
 from scipy.stats import sem
 import pandas as pd
 import numpy as np
+import sys
 import os
 
 seeds = [42, 555, 666, 999, 9999]
