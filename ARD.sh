@@ -1,24 +1,13 @@
+model_path=$1
 data_path=$2
+output_dir='ARD-'$1
+
 train_file=$data_path/train.json
 validation_file=$data_path/test.json
 
 per_device_train_batch_size=16
 learning_rate=0.0001
 max_length=128
-
-
-# Select the model to train
-if [[ $1 == "cased" ]]; then
-     model_path='bert-base-cased'
-elif [[ $1 == "uncased" ]]; then
-     model_path='bert-base-uncased'
-else 
-     echo "Either select cased or uncased model!"
-     exit $exit_code
-fi
-
-output_dir='ARD-'$1
-
 
 mkdir $output_dir
 
