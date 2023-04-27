@@ -5,9 +5,17 @@ dailymed_url='https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/'
 dailymed_spl_path='dailymed_spl.csv'
 dailymed_spl_unique_path='dailymed_spl_unique.csv'
 train_data_path='Unique.txt'
-initial_model='bert-base-uncased'
 root_output_folder='output'
 
+# Select the model to train
+if [[ $1 == "cased" ]]; then
+     initial_model='bert-base-cased'
+elif [[ $1 == "uncased" ]]; then
+     initial_model='bert-base-uncased'
+else 
+     echo "Either select cased or uncased model!"
+     exit $exit_code
+fi
 
 # Set training parameters:
 max_seq_length=128
@@ -19,9 +27,6 @@ batch_size=128
 # Download and unzip DailyMed Data:
 wget https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip
 unzip dm_spl_zip_files_meta_data.zip
-
-# Install dependancies
-bash 1-install-dependancies.sh
 
 # Download DailyMed data:
 python 2-dailymed_data.py -s $dailymed_spl_path -u $dailymed_url
@@ -59,4 +64,3 @@ python transformers-main/examples/pytorch/language-modeling/run_mlm.py \
   --save_steps $save_steps \
   --per_gpu_train_batch_size $batch_size \
   --seed 42 \
-
