@@ -52,7 +52,7 @@ mkdir $catch_path
 # Save limit
 save_total_limit=$(($max_steps / $save_steps))
 
-python transformers-main/examples/pytorch/language-modeling/run_mlm.py \
+python transformers-4.14.1-release/examples/pytorch/language-modeling/run_mlm.py \
   --train_file $train_data_path \
   --output_dir $output_path \
   --model_name_or_path $initial_model \
