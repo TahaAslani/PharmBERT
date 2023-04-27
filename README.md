@@ -7,6 +7,8 @@ A domain specific BERT model for drug labels
 bash 1-install-dependancies.sh
 ```
 
+You also need a function Cuda installed on your machine. We used cuda11.1.
+
 ## Perform the domain-specific pre-training
 To pretrain the uncased model:
 ```
