@@ -24,12 +24,12 @@ mkdir $output_dir
 
 for seed in 42 555 666 999 9999
 do
-mkdir $output_dir\$seed
+mkdir mkdir "$output_dir/$seed"
 python run_ner_ard.py \
   --model_name_or_path $model_path \
   --train_file $train_file \
   --validation_file $validation_file \
-  --output_dir $output_dir\$seed \
+  --output_dir mkdir "$output_dir/$seed" \
   --per_device_train_batch_size $per_device_train_batch_size \
   --learning_rate $learning_rate \
   --max_length $max_length \
