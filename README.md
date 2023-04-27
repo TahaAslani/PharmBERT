@@ -10,10 +10,10 @@ bash 1-install-dependancies.sh
 ## Perform the domain-specific pre-training
 To pretrain the uncased model:
 ```
-train.sh uncased
+pretrain.sh uncased
 ```
 
 To pretrain the cased model:
 ```
-train.sh cased
+pretrain.sh cased
 ```
