@@ -36,5 +36,5 @@ python prepare_ard_data.py -d OSF -m bert-base-cased -o json_tokens_cased
 ```
 Run the pipeline
 ```
-bash ARD.sh cased json_tokens_cased
+bash ARD.sh output/Model-128/checkpoint-200000 json_tokens_cased
 ```
