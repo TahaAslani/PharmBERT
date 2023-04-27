@@ -35,3 +35,5 @@ python transformers-4.14.1-release/examples/pytorch/token-classification/run_ner
   --max_length $max_length \
   --seed $seed
 done
+
+python get_f1.py $output_dir
