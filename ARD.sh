@@ -25,7 +25,7 @@ mkdir $output_dir
 for seed in 42 555 666 999 9999
 do
 mkdir $output_dir\$seed
-python transformers-4.14.1-release/examples/pytorch/token-classification/run_ner_no_trainer.py \
+python run_ner_ard.py \
   --model_name_or_path $model_path \
   --train_file $train_file \
   --validation_file $validation_file \
