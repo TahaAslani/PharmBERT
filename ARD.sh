@@ -5,7 +5,7 @@ validation_file=$data_path/test.json
 per_device_train_batch_size=16
 learning_rate=0.0001
 max_length=128
-seed=42
+
 
 # Select the model to train
 if [[ $1 == "cased" ]]; then
@@ -22,13 +22,16 @@ output_dir='ARD-'$1
 
 mkdir $output_dir
 
-
+for seed in 42 555 666 999 9999
+do
+mkdir $output_dir\$seed
 python transformers-4.14.1-release/examples/pytorch/token-classification/run_ner_no_trainer.py \
   --model_name_or_path $model_path \
   --train_file $train_file \
   --validation_file $validation_file \
-  --output_dir $output_dir \
+  --output_dir $output_dir\$seed \
   --per_device_train_batch_size $per_device_train_batch_size \
   --learning_rate $learning_rate \
   --max_length $max_length \
   --seed $seed
+done
