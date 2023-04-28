@@ -24,3 +24,5 @@ do
     --fp16
 
 done
+
+python Eval.py $res_path
