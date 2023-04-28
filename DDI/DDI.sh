@@ -23,6 +23,6 @@ do
     --seed $seed \
     --fp16
 
-done
+python Eval.py $res_path/$seed
 
-python Eval.py $res_path
+done
