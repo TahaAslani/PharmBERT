@@ -14,12 +14,16 @@ args = parser.parse_args()
 input_path = args.input_path
 output_path = args.output_path
 
+# Load data
 original = pd.read_csv(input_path)
 
+# Get columns
 my_columns = original.columns
 
+# get len
 original_len = original.shape[0]
 
+# Loop through the columns
 for col in my_columns:
     print(col)
     # We do not want to ignore duplicates for this column
@@ -32,7 +36,5 @@ for col in my_columns:
     
     original.loc[rep_ind,col] = ''
 
+# Save the results
 original.to_csv(output_path, index=False)
-
-
-
