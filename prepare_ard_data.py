@@ -33,7 +33,7 @@ def list2str(my_list):
     my_str = my_str[:-2]+']'
     return my_str
 
-# This function takes a none NE text, tokenizes it and adds tekens to the
+# This function takes a none named entity (NE) text, tokenizes it and adds tekens to the
 # global variable token. it will also add the lables of the same length to 
 # the global variable ner_tags (labels). Since the text by defination is 
 # none NE (no named entity, i.e. general text), all of the lables are
@@ -94,7 +94,6 @@ for partition in ['train', 'test']:
         ann_path = os.path.join(partition_input_path, label_section_name+'.ann')
         txt_path = os.path.join(partition_input_path, label_section_name+'.txt')
         
-        
         text = open(txt_path, 'r').read()
         
         try:
@@ -115,7 +114,6 @@ for partition in ['train', 'test']:
             positions = ' '.join(section_mentions_raw.iloc[i,1].split(' ')[1:])
             section_mentions.loc[i,'positions'] = positions 
             section_mentions.loc[i,'str'] = section_mentions_raw.iloc[i,2]
-            
             
         # Sort by mention position:
         def split_int(my_string):
@@ -157,10 +155,6 @@ for partition in ['train', 'test']:
                 # print('NE', chunk_tokens)
                 pos = NE_end
         
-        
-        
-        
-        
         # If there is not mention for this section:
         if len(section_mentions) == 0:
             final_start = 0
@@ -168,7 +162,6 @@ for partition in ['train', 'test']:
             # Final part:
             final_start = NE_end
             
-        
         final_end = len(text)
         
         chunk_text = text[final_start:final_end]
