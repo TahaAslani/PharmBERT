@@ -13,6 +13,7 @@ save_steps=20000
 learning_rate=2e-5
 batch_size=128
 
+# Set the random seed
 seed=42
 
 # Select the model to train
@@ -66,3 +67,5 @@ python transformers-4.14.1-release/examples/pytorch/language-modeling/run_mlm.py
   --save_steps $save_steps \
   --per_gpu_train_batch_size $batch_size \
   --seed $seed \
+  
+  echo "Done!"
