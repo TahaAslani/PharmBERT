@@ -40,3 +40,10 @@ Run the pipeline
 ```
 bash ARD.sh output/Model-128/checkpoint-200000 json_tokens_cased ard_res
 ```
+
+
+#DDI
+Install transformers v2.1.0
+```
+pip install transformers==2.1.0
+```
