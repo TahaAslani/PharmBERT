@@ -18,7 +18,7 @@ python run_ner_ard.py \
   --model_name_or_path $model_path \
   --train_file $train_file \
   --validation_file $validation_file \
-  --output_dir mkdir "$output_dir/$seed" \
+  --output_dir "$output_dir/$seed" \
   --per_device_train_batch_size $per_device_train_batch_size \
   --learning_rate $learning_rate \
   --max_length $max_length \
