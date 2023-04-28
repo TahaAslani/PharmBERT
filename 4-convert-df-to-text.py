@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import argparse
 
-parser = argparse.ArgumentParser(description='Convert to text')
+parser = argparse.ArgumentParser(description='Convert data frame to text')
 
 parser.add_argument('--data-path', '-i', required=True, type=str,
     help='Data path.')
@@ -16,8 +16,8 @@ args = parser.parse_args()
 data_path = args.data_path
 output_path = args.output_path
 
-chosen_col = [
-              'INDICATIONS_AND_USAGE', 'DOSAGE_AND_ADMINISTRATION', 'DOSAGE_FORMS_AND_STRENGTHS',
+# Chosen columns
+chosen_col = ['INDICATIONS_AND_USAGE', 'DOSAGE_AND_ADMINISTRATION', 'DOSAGE_FORMS_AND_STRENGTHS',
         'CONTRAINDICATIONS', 'WARNINGS_AND_PRECAUTIONS', 'ADVERSE_REACTIONS', 'DRUG_INTERACTIONS',
         'USE_IN_SPECIFIC_POPULATIONS', 'DRUG_ABUSE_AND_DEPENDENCE', 'OVERDOSAGE', 'DESCRIPTION',
         'CLINICAL_PHARMACOLOGY', 'NONCLINICAL_TOXICOLOGY', 'CLINICAL_STUDIES', 'HOW_SUPPLIED',
@@ -28,13 +28,15 @@ chosen_col = [
         'MECHANISM_OF_ACTION', 'NONTERATOGENIC_EFFECTS', 'NURSING_MOTHERS',
         'LACTATION', 'TERATOGENIC_EFFECTS', 'SPL_PATIENT_PACKAGE_INSERT']
 
-
+# Load the data
 df = pd.read_csv(data_path)
 
+# Print every 10000 steps
 print_step = 10000
 
 f = open(output_path,'w')
 
+# Clean the text
 def clean_up(string):
     string = re.sub('\\\\x..', '', string)
     string = re.sub('\\\\t', '', string).strip()
@@ -56,4 +58,3 @@ for i in df.index:
 f.close()
 
 print('Done!')
-
