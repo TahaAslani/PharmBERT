@@ -20,8 +20,8 @@ To pretrain the cased model:
 bash pretrain.sh cased
 ```
 
-## Perform the Finetuning for ARD
-To finetine for the ARD task:
+## Perform the Finetuning for ADR
+To finetine for the ARR task:
 
 Download all files of the train data
 https://osf.io/6h9q4/
@@ -38,12 +38,5 @@ python prepare_ard_data.py -d OSF -m bert-base-cased -o json_tokens_cased
 ```
 Run the pipeline
 ```
-bash ARD.sh output/Model-128/checkpoint-200000 json_tokens_cased ard_res
-```
-
-
-## DDI
-Install transformers v2.1.0
-```
-pip install transformers==2.1.0
+bash ADR.sh output/Model-128/checkpoint-200000 json_tokens_cased adr_res
 ```
