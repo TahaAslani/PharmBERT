@@ -22,7 +22,7 @@ do
   mkdir mkdir "$output_dir/$seed"
 
   # Run the code
-  python run_ner_ard.py \
+  python run_ner_adr.py \
     --model_name_or_path $model_path \
     --train_file $train_file \
     --validation_file $validation_file \
