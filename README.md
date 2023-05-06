@@ -20,7 +20,7 @@ To pretrain the cased model:
 bash pretrain.sh cased
 ```
 
-## Perform the Finetuning for ADR
+## Perform Finetuning for ADR
 To finetine for the ARR task:
 
 Download all files of the train data
@@ -36,6 +36,7 @@ Convert data to json format:
 ```
 python prepare_ard_data.py -d adr_data -m bert-base-cased -o json_tokens_cased
 ```
+
 Run the pipeline
 ```
 bash ADR.sh output/Model-128/checkpoint-200000 json_tokens_cased adr_res
