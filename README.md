@@ -5,8 +5,8 @@ A domain specific BERT model for drug labels
 ## Install dependancies
 We recommend creating a new conda enviroenmet 
 ```
-conda create -n PharmEBRT python=3.8.10 -y
-source activate PharmEBRT
+conda create -n PharmBERT python=3.8.10 -y
+source activate PharmBERT
 ```
 Alternatively, you can install python 3.8.10 in a different way.
 
