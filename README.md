@@ -8,8 +8,10 @@ We recommend creating a new conda enviroenmet
 conda create -n PharmEBRT python=3.8.10 -y
 source activate PharmEBRT
 ```
+Alternatively, you can install python 3.8.10 in a different way.
 
-Install the rest of the dependancies
+
+Install the rest of the dependancies:
 ```
 bash 1-install-dependancies.sh
 ```
