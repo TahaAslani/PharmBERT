@@ -46,7 +46,12 @@ Convert data to json format:
 python prepare_ard_data.py -d adr_data -m bert-base-cased -o json_tokens_cased
 ```
 
-Run the pipeline
+Run the pipeline with PharmBERT cased
 ```
 bash ADR.sh output/Model-128/checkpoint-200000 adr_data/cased adr_res_cased
+```
+
+Run the pipeline with PharmBERT uncased
+```
+bash ADR.sh output/Model-128/checkpoint-200000 adr_data/uncased adr_res_uncased
 ```
