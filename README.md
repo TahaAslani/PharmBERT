@@ -1,6 +1,14 @@
 # PharmBERT
 A domain specific BERT model for drug labels
 
+## Download this repo
+```
+wget https://github.com/TahaAslani/PharmBERT/archive/refs/heads/main.zip
+unzip main.zip
+cp PharmBERT-main/* .
+rm -r PharmBERT-main
+rm main.zip
+```
 
 ## Install dependancies
 We recommend creating a new conda enviroenmet 
