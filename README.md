@@ -5,9 +5,8 @@ A domain specific BERT model for drug labels
 ```
 wget https://github.com/TahaAslani/PharmBERT/archive/refs/heads/main.zip
 unzip main.zip
-cp PharmBERT-main/* .
-rm -r PharmBERT-main
 rm main.zip
+cd PharmBERT-main/
 ```
 
 ## Install dependancies
