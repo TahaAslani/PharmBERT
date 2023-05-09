@@ -32,21 +32,6 @@ bash pretrain.sh cased
 ```
 
 ## Perform Finetuning for ADR
-To finetine for the ARR task:
-
-Download all files of the train data
-https://osf.io/6h9q4/
-and save it in adr_data/train
-
-Download all files of the test data
-https://osf.io/n84w3/
-and save it in adr_data/test
-
-
-Convert data to json format:
-```
-python prepare_ard_data.py -d adr_data -m bert-base-cased -o json_tokens_cased
-```
 
 Run the pipeline with PharmBERT cased
 ```
