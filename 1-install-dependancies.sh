@@ -1,5 +1,3 @@
-conda install python=3.8.10 -y # Or use another way to install this version of python
-
 # Download Transformers codes
 wget https://github.com/huggingface/transformers/archive/refs/heads/v4.14.1-release.zip
 unzip v4.14.1-release.zip
