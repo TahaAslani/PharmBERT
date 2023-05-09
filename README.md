@@ -6,7 +6,7 @@ A domain specific BERT model for drug labels
 We recommend creating a new conda enviroenmet 
 ```
 conda create -n PharmBERT python=3.8.10 -y
-source activate PharmBERT
+conda activate PharmBERT
 ```
 Alternatively, you can install python 3.8.10 in a different way.
 
