@@ -8,8 +8,10 @@ We recommend creating a new conda enviroenmet
 conda create -n PharmBERT python=3.8.10 -y
 conda activate PharmBERT
 ```
-Alternatively, you can install python 3.8.10 in a different way.
-
+Alternatively, you can install python 3.8.10 in a different way. For example
+```
+conda install python=3.8.10 -y
+```
 
 Install the rest of the dependancies:
 ```
