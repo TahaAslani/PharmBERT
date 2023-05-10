@@ -1,13 +1,16 @@
 # PharmBERT
 A domain specific BERT model for drug labels.
 
-The cased and und uncased versions of PharmBERT can be downloaded from Hugging Face:
+The cased and und uncased versions of PharmBERT can be downloaded from Hugging Face page of Liang Lab:
+
 https://huggingface.co/Lianglab
 
 The cased model:
+
 https://huggingface.co/Lianglab/PharmBERT-cased/tree/main
 
 The uncased model:
+
 https://huggingface.co/Lianglab/PharmBERT-uncased/tree/main
 
 
