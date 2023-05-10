@@ -1,5 +1,11 @@
 # PharmBERT
-A domain specific BERT model for drug labels
+A domain specific BERT model for drug labels.
+
+The cased and und uncased versions of PharmBERT can be downloaded from Hugging Face:
+```
+https://huggingface.co/Lianglab/PharmBERT-cased/tree/main
+https://huggingface.co/Lianglab/PharmBERT-uncased/tree/main
+```
 
 ## Download this repo
 ```
