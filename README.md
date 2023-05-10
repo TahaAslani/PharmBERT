@@ -42,10 +42,10 @@ bash pretrain.sh cased
 
 Run the pipeline with PharmBERT cased
 ```
-bash ADR.sh output/Model-128/checkpoint-200000 adr_data/cased adr_res_cased
+bash ADR.sh Lianglab/PharmBERT-cased adr_data/cased adr_res_cased
 ```
 
 Run the pipeline with PharmBERT uncased
 ```
-bash ADR.sh output/Model-128/checkpoint-200000 adr_data/uncased adr_res_uncased
+bash ADR.sh Lianglab/PharmBERT-uncased adr_data/uncased adr_res_uncased
 ```
