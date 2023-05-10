@@ -5,16 +5,16 @@ The cased and und uncased versions of PharmBERT can be downloaded from Hugging F
 ```
 https://huggingface.co/Lianglab
 ```
-The cased model
+The cased model:
 ```
 https://huggingface.co/Lianglab/PharmBERT-cased/tree/main
 ```
-The uncased model
+The uncased model:
 ```
 https://huggingface.co/Lianglab/PharmBERT-uncased/tree/main
 ```
 
-# PharmBERT
+# Codes of the paper
 To reproduce the results run the followong codes:
 ## Download this repo
 ```
