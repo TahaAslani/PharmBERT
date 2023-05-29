@@ -66,3 +66,14 @@ Run the pipeline with PharmBERT uncased
 ```
 bash ADR.sh Lianglab/PharmBERT-uncased adr_data/uncased adr_res_uncased
 ```
+
+## Citation
+```
+@article{PharmBERT,
+  title={PharmBERT: a domain-specific BERT model for drug labels},
+  author={ValizadehAslani, taha and Shi, Yiwen and Ren, Ping and Wang, Jing and Zhang, Yi and Hu, Meng and Zhao Liang and Liang, Hualou},
+  journal={Briefings in Bioinformatics},
+  year={2023},
+  publisher={Oxford University Press}
+}
+```
