@@ -71,10 +71,15 @@ bash ADR.sh Lianglab/PharmBERT-uncased adr_data/uncased adr_res_uncased
 Please cite as:
 ```
 @article{PharmBERT,
-  title={PharmBERT: a domain-specific BERT model for drug labels},
-  author={ValizadehAslani, Taha and Shi, Yiwen and Ren, Ping and Wang, Jing and Zhang, Yi and Hu, Meng and Zhao, Liang and Liang, Hualou},
-  journal={Briefings in Bioinformatics},
-  year={2023},
-  publisher={Oxford University Press}
+    author = {ValizadehAslani, Taha and Shi, Yiwen and Ren, Ping and Wang, Jing and Zhang, Yi and Hu, Meng and Zhao, Liang and Liang, Hualou},
+    title = "{PharmBERT: a domain-specific BERT model for drug labels}",
+    journal = {Briefings in Bioinformatics},
+    year = {2023},
+    month = {06},
+    issn = {1477-4054},
+    doi = {10.1093/bib/bbad226},
+    url = {https://doi.org/10.1093/bib/bbad226},
+    note = {bbad226},
+    eprint = {https://academic.oup.com/bib/advance-article-pdf/doi/10.1093/bib/bbad226/50603440/bbad226.pdf},
 }
 ```
