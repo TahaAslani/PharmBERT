@@ -2,13 +2,10 @@
 A domain-specific BERT model for drug labels.
 
 Please refer to the PharmBERT paper for the model description:
-
 https://doi.org/10.1093/bib/bbad226
 
 The cased and uncased versions of PharmBERT can be downloaded from the Hugging Face page of Liang Lab:
-
 https://huggingface.co/Lianglab/PharmBERT-cased/tree/main
-
 https://huggingface.co/Lianglab/PharmBERT-uncased/tree/main
 
 
