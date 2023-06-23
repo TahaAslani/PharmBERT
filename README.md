@@ -1,23 +1,20 @@
 # PharmBERT
-A domain specific BERT model for drug labels.
+A domain-specific BERT model for drug labels.
+
+Please refer to the PharmBERT paper for the model description:
+
+https://doi.org/10.1093/bib/bbad226
 
 The cased and uncased versions of PharmBERT can be downloaded from the Hugging Face page of Liang Lab:
 
-https://huggingface.co/Lianglab
-
-
-The cased model:
-
 https://huggingface.co/Lianglab/PharmBERT-cased/tree/main
-
-The uncased model:
 
 https://huggingface.co/Lianglab/PharmBERT-uncased/tree/main
 
 
 
 # Codes of the paper
-To reproduce the results run the followong codes:
+To reproduce the results run the following codes:
 ## Download this repo
 ```
 wget https://github.com/TahaAslani/PharmBERT/archive/refs/heads/main.zip
@@ -26,23 +23,23 @@ rm main.zip
 cd PharmBERT-main/
 ```
 
-## Install dependancies
-We recommend creating a new conda enviroenmet 
+## Install dependencies
+We recommend creating a new conda environment 
 ```
 conda create -n PharmBERT python=3.8.10 -y
 conda activate PharmBERT
 ```
-Alternatively, you can install python 3.8.10 in a different way. For example
+Alternatively, you can install Python 3.8.10 in a different way. For example
 ```
 conda install python=3.8.10 -y
 ```
 
-Install the rest of the dependancies:
+Install the rest of the dependencies:
 ```
 bash 1-install-dependancies.sh
 ```
 
-You also need Cuda installed on your machine. We used cuda 11.1.
+You also need Cuda installed on your machine. We used Cuda 11.1.
 
 ## Perform the domain-specific pre-training
 To pretrain the uncased model:
